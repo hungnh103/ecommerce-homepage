@@ -1,0 +1,36 @@
+.product-wrapper {
+  height: 330px;
+  width: 200px;
+  margin-top: 20px;
+
+  &__thumbnail {
+    text-align: center;
+
+    img {
+      width: 180px;
+    }
+  }
+
+  &__category {
+    color: #646577;
+    font-size: 9pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 7px 0;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 13pt;
+  }
+
+  &__description {
+    font-size: 13pt;
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    font-size: 11pt;
+    font-weight: bold;
+  }
+}

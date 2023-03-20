@@ -1,0 +1,9 @@
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+
+  &__body {
+    width: 1200px;
+    display: flex;
+  }
+}
