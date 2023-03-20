@@ -1,0 +1,32 @@
+.header-wrapper {
+  height: 400px;
+  background-image: url('../../public/images/banner.jpg');
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    color: white;
+    width: 60%;
+  }
+
+  &__slogan {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 230px;
+  }
+
+  &__search-bar {
+    input {
+      margin: 30px;
+      width: 90%;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 20px;
+      border: none;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  }
+}
