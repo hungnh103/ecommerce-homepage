@@ -1,3 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+
 .main-content-wrapper {
   width: 80%;
+
+  &__pagination {
+    margin: 90px 0 70px;
+    display: flex;
+    justify-content: center;
+  }
 }
