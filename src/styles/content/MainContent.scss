@@ -1,10 +1,29 @@
-@import "~bootstrap/scss/bootstrap";
-
 .main-content-wrapper {
+  margin-left: 20px;
   width: 80%;
 
+  &__header {
+    height: 100px;
+    border-bottom: 1px solid #dedede;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 25px;
+
+    select {
+      border: none;
+      margin-left: 50px;
+      background: none;
+      font-size: 16px;
+    }
+
+    select:focus {
+      outline: none;
+    }
+  }
+
   &__pagination {
-    margin: 90px 0 70px;
+    margin: 70px 0 50px;
     display: flex;
     justify-content: center;
   }

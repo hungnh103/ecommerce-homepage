@@ -1,7 +1,7 @@
 .product-wrapper {
-  height: 310px;
+  height: 330px;
   width: 200px;
-  margin-top: 20px;
+  margin: 18px;
 
   &__thumbnail {
     text-align: center;
@@ -29,8 +29,35 @@
     margin-bottom: 10px;
   }
 
-  &__price {
-    font-size: 11pt;
-    font-weight: bold;
+  &__extra-info {
+    display: flex;
+
+    &__price {
+      font-size: 11pt;
+      font-weight: bold;
+      margin-right: 12px;
+      height: fit-content;
+
+      span {
+        color: #eac477;
+        font-size: 9pt;
+      }
+    }
+
+    &__rating {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #eac477;
+      border: 1px solid #eac477;
+      border-radius: 6px;
+      height: fit-content;
+      padding: 0 6px;
+
+      .star-icon {
+        width: 10px;
+        height: 10px;
+      }
+    }
   }
+
 }
