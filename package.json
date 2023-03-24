@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@faker-js/faker": "^7.6.0",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.14",
     "@testing-library/jest-dom": "^5.14.1",
@@ -26,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api": "json-server --watch api/db.json -p 9000"
+    "api": "json-server --watch api/db.json -p 9000",
+    "render-data": "node api/render-data.js"
   },
   "eslintConfig": {
     "extends": [
