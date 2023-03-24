@@ -15,7 +15,7 @@ function App() {
 
   const [totalItems, setTotalItems] = useState(0)
   const [sortCriteria, setSortCriteria] = useState('id_desc')
-  const [perPage, setPerPage] = useState('2')
+  const [perPage, setPerPage] = useState('16')
   const [pageCount, setPageCount] = useState(0)
   const [currentPage, setCurrentPage] = useState(1)
 
@@ -180,7 +180,7 @@ function App() {
             .forEach(list => list.style.display = 'none')
 
     setSortCriteria('id_desc')
-    setPerPage('2')
+    setPerPage('16')
     setCurrentPage(1)
     setProductNameParam('')
     setSelectedCategory('')
@@ -197,6 +197,7 @@ function App() {
         handleSearchProduct={handleSearchProduct}
       />
       <Content
+        productNameParam={productNameParam}
         sortCriteria={sortCriteria}
         perPage={perPage}
         selectedBrands={selectedBrands}

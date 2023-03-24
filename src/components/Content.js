@@ -4,6 +4,7 @@ import Filter from './content/Filter'
 import MainContent from './content/MainContent'
 
 const Content = ({
+  productNameParam,
   sortCriteria,
   perPage,
   selectedBrands,
@@ -46,6 +47,7 @@ const Content = ({
           clearAllFilters={clearAllFilters}
         />
         <MainContent
+          productNameParam={productNameParam}
           sortCriteria={sortCriteria}
           perPage={perPage}
           totalProductsFound={totalProductsFound}

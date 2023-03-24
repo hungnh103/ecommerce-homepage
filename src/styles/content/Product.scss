@@ -1,5 +1,5 @@
 .product-wrapper {
-  height: 330px;
+  height: 370px;
   width: 200px;
   margin: 18px;
 
@@ -22,6 +22,11 @@
   &__name {
     font-weight: bold;
     font-size: 13pt;
+
+    .highlight-search-tearm {
+      background-color: #f5d79e;
+      padding: 5px 0;
+    }
   }
 
   &__description {

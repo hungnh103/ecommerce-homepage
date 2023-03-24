@@ -4,6 +4,7 @@ import ProductsList from './ProductsList'
 import ReactPaginate from 'react-paginate'
 
 const MainContent = ({
+  productNameParam,
   sortCriteria,
   perPage,
   totalProductsFound,
@@ -18,21 +19,23 @@ const MainContent = ({
     <div className='main-content-wrapper'>
       <div className='main-content-wrapper__header'>
         <select
-          onClick={sortItems}
+          onChange={sortItems}
           className='main-content-wrapper__header__sort'
+          value={sortCriteria}
         >
-          <option value='id_desc' selected={sortCriteria === 'id_desc'}>Sort by newest</option>
-          <option value='price_asc' selected={sortCriteria === 'price_asc'}>Price ascending</option>
-          <option value='price_desc' selected={sortCriteria === 'price_desc'}>Price descending</option>
+          <option value='id_desc'>Sort by newest</option>
+          <option value='price_asc'>Price ascending</option>
+          <option value='price_desc'>Price descending</option>
         </select>
 
         <select
-          onClick={selectPerPage}
+          onChange={selectPerPage}
           className='main-content-wrapper__header__perpage'
+          value={perPage}
         >
-          <option value='2' selected={perPage === '2'}>2 hits per page</option>
-          <option value='4' selected={perPage === '4'}>4 hits per page</option>
-          <option value='6' selected={perPage === '6'}>6 hits per page</option>
+          <option value='16'>16 hits per page</option>
+          <option value='32'>32 hits per page</option>
+          <option value='64'>64 hits per page</option>
         </select>
       </div>
 
@@ -40,7 +43,10 @@ const MainContent = ({
         {products.length > 0 ? (
           <>
             <span>Total items: {totalProductsFound}</span>
-            <ProductsList products={products} />
+            <ProductsList
+              productNameParam={productNameParam}
+              products={products}
+            />
 
             <div className='main-content-wrapper__pagination'>
               <ReactPaginate

@@ -60,9 +60,9 @@ const Filter = ({
                   }
                   onClick={handleSelectCategory}
                   data-cid={category.id}
-                  className={selectedCategory === `,${category.id},` && 'active-item'}
+                  className={selectedCategory === `,${category.id},` ? 'active-item' : ''}
                 >
-                  {category.name} - {category.product_count}
+                  {category.name} <span className='item-count-label'>{category.product_count}</span>
                 </Button>
 
                 {category.sub_categories.length > 0 && (
@@ -75,9 +75,9 @@ const Filter = ({
                         <Button
                           onClick={handleSelectCategory}
                           data-cid={sub_cate.id}
-                          className={`sub-item ${selectedCategory === `,${sub_cate.id},` && 'active-item'}`}
+                          className={`sub-item ${selectedCategory === `,${sub_cate.id},` ? 'active-item' : ''}`}
                         >
-                          {sub_cate.name} - {sub_cate.product_count}
+                          {sub_cate.name} <span className='item-count-label'>{sub_cate.product_count}</span>
                         </Button>
                       </li>
                     ))}
@@ -97,7 +97,12 @@ const Filter = ({
               <li key={brand.id}>
                 <FormGroup>
                   <FormControlLabel
-                    label={brand.name + ' - ' + brand.product_count}
+                    label={
+                      <>
+                        {brand.name}
+                        <span className='item-count-label'>{brand.product_count}</span>
+                      </>
+                    }
                     control={
                       <Checkbox
                         checked={selectedBrands.includes(brand.id.toString())}

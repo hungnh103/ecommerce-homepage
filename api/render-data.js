@@ -1,6 +1,51 @@
 const { faker } = require('@faker-js/faker');
 const fs = require('fs')
 
+const randomImage = () => {
+  const imageTypes = [
+    'abstract', 'animals', 'avatar', 'business', 'cats', 'city',
+    'fashion', 'food', 'image', 'imageUrl', 'nature',
+    'nightlife', 'people', 'sports', 'technics', 'transport'
+  ]
+
+  const theme = imageTypes[Math.floor(Math.random() * imageTypes.length)]
+
+  switch (theme) {
+    case 'abstract':
+      return faker.image.abstract()
+    case 'animals':
+      return faker.image.animals()
+    case 'avatar':
+      return faker.image.avatar()
+    case 'business':
+      return faker.image.business()
+    case 'cats':
+      return faker.image.cats()
+    case 'city':
+      return faker.image.city()
+    case 'fashion':
+      return faker.image.fashion()
+    case 'food':
+      return faker.image.food()
+    case 'image':
+      return faker.image.image()
+    case 'imageUrl':
+      return faker.image.imageUrl()
+    case 'nature':
+      return faker.image.nature()
+    case 'nightlife':
+      return faker.image.nightlife()
+    case 'people':
+      return faker.image.people()
+    case 'sports':
+      return faker.image.sports()
+    case 'technics':
+      return faker.image.technics()
+    case 'transport':
+      return faker.image.transport()
+  }
+}
+
 const randomNumber = (n = 5) => {
   return Math.floor(Math.random() * n) + 1
 }
@@ -93,6 +138,8 @@ const randomProductsList = (categoriesList, brandsList) => {
           id = randomNumber(10_000)
         }
 
+        faker.image.abstract()
+
         const product = {
           id: id,
           name: faker.commerce.productName(),
@@ -100,7 +147,7 @@ const randomProductsList = (categoriesList, brandsList) => {
           price: Number(faker.commerce.price(1, 1000, 2)),
           free_ship: Math.random() < 0.5,
           avg_rating: randomNumber(),
-          image_url: faker.image.animals(),
+          image_url: randomImage(),
           category_name: category.name,
           category_ids: `,${category.id},${subCategory.id},`,
           brand_id: brandIDs[Math.floor(Math.random() * brandIDs.length)]
@@ -112,7 +159,7 @@ const randomProductsList = (categoriesList, brandsList) => {
   })
 
   console.log(`--> created ${productsList.length} products`)
-  return productsList
+  return productsList.sort((p1, p2) => p1.id - p2.id)
 }
 
 (() => {
