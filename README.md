@@ -7,12 +7,16 @@
 ## Set up
 Run below commands:
 ```sh
+cp .env.sample .env
 yarn install
 yarn render-data
 yarn start
 ```
 
 Then open browser at URL http://localhost:3000 to experience.
+
+## Live Demo
+https://ecommerce-homepage.vercel.app/
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/22311747/227595433-9886c008-d406-4088-896e-b15923e1c078.png)
