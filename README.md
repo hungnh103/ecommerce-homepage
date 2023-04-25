@@ -7,6 +7,7 @@
 ## Set up
 Run below commands:
 ```sh
+cp .env.sample .env
 yarn install
 yarn render-data
 yarn start

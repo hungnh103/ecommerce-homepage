@@ -6,7 +6,7 @@ import './App.scss';
 import Header from './components/Header'
 import Content from './components/Content'
 
-const baseUrl = 'http://localhost:9000'
+const baseUrl = process.env.REACT_APP_PUBLIC_API_ENDPOINT
 
 function App() {
   const [products, setProducts] = useState([])
