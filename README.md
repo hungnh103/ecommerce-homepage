@@ -9,7 +9,6 @@ Run below commands:
 ```sh
 yarn install
 yarn render-data
-yarn api
 yarn start
 ```
 
