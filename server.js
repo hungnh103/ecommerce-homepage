@@ -15,3 +15,5 @@ app.get('/*', function (req, res) {
 });
 
 app.listen(port);
+
+module.exports = app;
